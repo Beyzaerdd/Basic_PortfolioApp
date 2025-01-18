@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PortfolioApp Admin</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+          name="viewport" />
+    <link rel="icon"
+          href="~/admin/img/kaiadmin/favicon.ico"
+          type="image/x-icon" />
+    <partial name="_StylesPartial" />
+    @await RenderSectionAsync("Styles",false)
+</head>
+<body>
+    <div class="wrapper">
+        <partial name="_SidebarPartial" />
+        <partial name="_MainPanelPartial" />
+        <div class="container">
+            <div class="page-inner">
+                @RenderBody()
+            </div>
+        </div>
+        <partial name="_FooterPartial" />
+    </div>
+    <partial name="_ScriptsPartial" />
+    @await RenderSectionAsync("Scripts",false)
+</body>
+</html>

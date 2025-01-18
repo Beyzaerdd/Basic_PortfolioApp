@@ -1,0 +1,109 @@
+﻿<div class="sidebar" data-background-color="dark">
+    <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="dark">
+            <a href="index.html" class="">
+                <span class="text-white">PortfolioAdmin</span>
+            </a>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                    <i class="gg-menu-left"></i>
+                </button>
+            </div>
+            <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+            </button>
+        </div>
+        <!-- End Logo Header -->
+    </div>
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+                <li class="nav-section">
+                    <span class="sidebar-mini-icon">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                    <h4 class="text-section">Menü</h4>
+                </li>
+
+                <li class="nav-item active">
+                    <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+                        <i class="fas fa-home"></i>
+                        <p>Ana Sayfa</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="Category" asp-action="Index">
+                        <i class="fas fa-file"></i>
+                        <p>Kategoriler</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="Project" asp-action="Index">
+                        <i class="fas fa-project-diagram"></i>
+                        <p>Projeler</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="Service" asp-action="Index">
+                        <i class="fas fa-file"></i>
+                        <p>Hizmetler</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="Skill" asp-action="Index">
+                        <i class="fas fa-file"></i>
+                        <p>Beceriler</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-area="Admin" asp-controller="Social" asp-action="Index">
+                        <i class="fas fa-file"></i>
+                        <p>Sosyal Medya</p>
+                    </a>
+                </li>
+
+                <!--AYARLAR MENÜSÜ-->
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#submenu">
+                        <i class="fas fa-bars"></i>
+                        <p>Ayarlar</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="submenu">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Hakkında Ayarları</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">İletişim Ayarları</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Banner Ayarları</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Hizmetler Ayarları</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Genel Ayarlar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

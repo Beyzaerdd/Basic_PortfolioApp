@@ -1,0 +1,15 @@
+﻿<!doctype html>
+<html lang="tr">
+
+<head>
+    @await Html.PartialAsync("_StylesPartial")
+</head>
+
+<body>
+    @await Html.PartialAsync("_HeaderPartial")
+    @RenderBody()
+    @await Html.PartialAsync("_FooterPartial")
+    @await Html.PartialAsync("_ScriptsPartial")
+</body>
+
+</html>

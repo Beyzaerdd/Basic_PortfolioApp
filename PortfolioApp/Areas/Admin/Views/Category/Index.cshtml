@@ -1,0 +1,75 @@
+﻿@model List<Category> 
+@* diyerek buraya gelecek olan verinin tipinin List<category> olduğunu belirtmiş olduk,
+yani veriyi karşıladık, aynı zamanda öntanımlı adı Model olan bir değişkenin içine veriyi almış olduk*@
+@{
+    var categoryList = Model;
+}
+
+
+<div class="page-header d-flex justify-content-between">
+    <h3 class="display-6 text-primary mb-1">Kategoriler</h3>
+    <a asp-area="Admin" asp-controller="Category" asp-action="Create" title="Yeni Kategori Ekle"
+            class="btn btn-icon btn-round btn-success">
+        <i class="fa fa-plus"></i>
+    </a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+          
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="EntityDatatable"
+                           class="display table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th width="30">Id</th>
+                                <th>Kategori</th>
+                                <th width="120">İşlemler</th>
+                             
+                            </tr>
+                        </thead>
+       
+                        <tbody>
+                            @foreach(var x in Model){ //aslında burada Category c in Model yapabilirdik ama kopyala yapıştır yaparken diğer sayfalarda da anlamlı olsun diye genel kullandık
+
+                             <tr>
+                                <td>@x.Id</td>
+                                 <td>@x.Name</td>
+                                <td>
+                                        <a asp-area="Admin" asp-controller="Category" asp-action="Edit" asp-route-id="@x.Id" title="Düzenle"
+                                           class="btn btn-icon btn-round btn-warning">
+                                            <i class="fas fa-pen text-white"></i>
+                                        </a>
+                                        <a asp-area ="Admin" asp-controller="Category" asp-action="SoftDelete" asp-route-id="@x.Id" title="Düzenle" title="Sil"
+                                           class="btn btn-icon btn-round btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                        <a asp-area="Admin" asp-controller="Category" asp-action="HardDelete" asp-route-id="@x.Id" title="Düzenle" title="Kalıcı Olarak Sil"
+                                           class="btn btn-icon btn-round btn-dark">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+
+                                    
+                                </td>
+                               
+                            </tr>
+
+                            }
+                       
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+@section Scripts {
+    <!-- Datatables -->
+   
+   <partial name="_DataTablesScriptsPartial" />
+}
